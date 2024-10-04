@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+mongoose.connect(""); ///Enter you Connecting String
 
 app.post('/login', (request, response) =>{
     const {email, password} = request.body;
@@ -25,7 +25,7 @@ app.post('/login', (request, response) =>{
     })
 })
 
-app.post('/register', (request, response) => {
+app.post('', (request, response) => {  ///Enter your Link
     EmployeeModel.create(request.body)
     .then(employees => response.json(employees))
     .catch(err => response.json(err))
