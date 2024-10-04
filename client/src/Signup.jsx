@@ -12,7 +12,7 @@ function Signup () {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('', {name, email, password})
+    axios.post('', {name, email, password}) /// Add your Link
     .then(result => {console.log(result)
       navigate('/login')
     })
